@@ -10,6 +10,8 @@ Inspired by the [material ui](https://material-ui.com/) site which has a really 
 
 This repo represents a start at this design goal and begins to outline the skeleton but the demos are not fully fleshed out yet. This is where we need your help.
 
+## Demo
+
 [live demo](https://intense-eyrie-34041.herokuapp.com/)
 
 ## Contributing
