@@ -1,0 +1,6 @@
+*.js linguist-language=Clojurescript
+*.css linguist-language=Clojurescript
+*.html linguist-language=Clojurescript
+*.js linguist-vendored=false
+*.css linguist-vendored=false
+*.html linguist-vendored=false
