@@ -52,7 +52,7 @@
                {:container true
                 :direction "row"
                 :style {:marginLeft 50}
-                :justify "left"}
+                :justify "flex-start"}
                 [:> (with-custom-styles (r/reactify-component demo))]
                ]]
            ])))
