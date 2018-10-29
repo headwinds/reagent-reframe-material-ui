@@ -27,7 +27,7 @@
                      }}
         [:h2 {:style {:fontFamily "Helvetica Neue" :color "#666" :fontSize 18 :margin 10}} "Components" ]
         [:div {:on-click (fn [ev] (set-location "/#/demos/button")) :style item-style} "Button"]
-        ;;[:div {:on-click (fn [ev] (set-location "/demos/table")) :style item-style} "Table"]
+        [:div {:on-click (fn [ev] (set-location "/#/demos/table")) :style item-style} "Table"]
         [:div {:on-click (fn [ev] (set-location "/#/demos/text-field")) :style item-style} "Text Field"]
         ;;[:div {:on-click (fn [ev] (set-location "/demos/toolbar")) :style item-style} "Toolbar"]
       ]

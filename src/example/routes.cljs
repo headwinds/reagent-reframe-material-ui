@@ -14,6 +14,7 @@
             [example.demos.demo-splash :as demo-splash]
             [example.demos.demo-text-field :as demo-text-field]
             [example.demos.demo-button :as demo-button]
+            [example.demos.table.demo-table :as demo-table]
             ))
 
 (defn hook-browser-navigation! []
@@ -39,6 +40,9 @@
   (defroute "/demos/text-field" []
     (re/dispatch [::events/set-active-demo "text-field"]))
 
+  (defroute "/demos/table" []
+    (re/dispatch [::events/set-active-demo "table"]))  
+
 
   ;; Routes:end --------------------
 
@@ -48,7 +52,7 @@
   (case demo-name
     "splash"              demo-splash/demo-splash
     "button"              demo-button/demo-button
-    ;;"table"               [demo-table/demo] ;; coming soon
+    "table"               demo-table/people-view
     "text-field"          demo-text-field/demo-text-field
     demo-splash/demo-splash)
 )

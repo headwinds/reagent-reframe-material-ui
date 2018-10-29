@@ -1,18 +1,27 @@
 # Reagent, Re-frame & Material UI
 
+![screenshot](gallery.png)
+
 * [Reagent](https://github.com/reagent-project/reagent)
 * [Re-frame](https://github.com/Day8/re-frame)
 * [Material UI](https://material-ui.com/)
-
-![screenshot](gallery.png)
+* [Starwars API](http://swapi.co/)
 
 Inspired by the [material ui](https://material-ui.com/) site which has a really nice look and feel, I thought would also be nice to port all the component demos to ClojureScript using a similar layout and approach.
 
-This repo represents a start at this design goal and begins to outline the skeleton but the demos are not fully fleshed out yet. This is where we need your help.
+This repo represents a start at this design goal and begins to outline the skeleton but the demos are not fully fleshed out yet. This is where we need your help. So why don't we combine "the world's popular framework" with data from one of the best sci-fi movie series, Star Wars?
 
 ## Demo
 
 [live demo](https://intense-eyrie-34041.herokuapp.com/)
+
+## Start
+
+```
+lein figwheel
+```
+
+Open browser to http://localhost:5000/
 
 ## Contributing
 

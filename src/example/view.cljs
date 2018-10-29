@@ -8,30 +8,17 @@
             ["material-ui/styles" :refer [createMuiTheme withStyles]]
             ["material-ui/colors" :as mui-colors]
             ["material-ui-icons" :as mui-icons]
+            [example.utils.theme :refer [with-custom-styles custom-theme]]
             [re-frame.core :as re :refer [reg-sub]]
             [example.utils.http-fx :refer [<sub >evt]]
             [example.demos.demo-splash :as demo-splash]
             [example.components.sidebar :refer [sidebar-view]]
             [example.routes :as routes :refer [get-main-demo]]
+            [example.utils.theme :refer [r2d2-blue]]
             [goog.object :as gobj]
             [reagent.impl.template :as rtpl]))
 
 ;; Example
-
-(def primary-color  (gobj/get (.-blue mui-colors) 100))
-(def primary-color-blue "#1976d2")
-
-(def custom-theme
-  (createMuiTheme
-    #js {:palette #js {:primary #js {:main primary-color-blue}}}))
-
-(defn custom-styles [theme]
-  #js {:button #js {:margin (.. theme -spacing -unit)}
-       :textField #js {:width 200
-                       :marginLeft (.. theme -spacing -unit)
-                       :marginRight (.. theme -spacing -unit)}})
-
-(def with-custom-styles (withStyles custom-styles))
 
 (def active-demo demo-splash/demo-splash)
 

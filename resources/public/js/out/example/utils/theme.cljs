@@ -3,8 +3,10 @@
             ["material-ui/styles" :refer [createMuiTheme withStyles]]
             ["material-ui/colors" :as mui-colors]))
 
-(def primary-color  (gobj/get (.-blue mui-colors) 100))
-(def primary-color-theme "#00a2c7")
+(def r2d2-blue "#6cb7e0")
+
+(def primary-color  r2d2-blue) ;;(gobj/get (.-blue mui-colors) 100))
+(def primary-color-theme r2d2-blue)
 (def primary-color-text "#1976d2")
 
 (def custom-theme
