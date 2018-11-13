@@ -7,7 +7,9 @@
 
   ;; TextField cursor fix:
 
-  (defonce text-state (r/atom "foobar"))
+  (defonce text-state (r/atom "Wage peace."))
+
+  (defonce text-area-state (r/atom "Shaggy giants from an arboreal world, the tall and commanding Wookiee species is an impressive sight to even the most jaded spacer.\n\nDespite their fearsome and savage countenance, Wookiees are intelligent, sophisticated, loyal and trusting. Loyalty and bravery are near-sacred tenets in Wookiee society.\n\nWhen peaceful, Wookiees are tender and gentle. Their tempers, however, are short; when angered, Wookiees can fly into a berserker rage and will not stop until the object of their distemper is sufficiently destroyed."))
 
   (def ^:private input-component
     (r/reactify-component
@@ -57,19 +59,22 @@
         [:> mui/Grid
          {:container true
           :direction "column"}
-         [:h2 "Text Field"]  
-         [text-field
-          {:value @text-state
-           :label "Text input"
-           :placeholder "Placeholder"
-           :helper-text "Helper text"
-           :class (.-textField classes)
-           :on-change (fn [e]
-                        (reset! text-state (.. e -target -value)))
-           :inputRef #(js/console.log "input-ref" %)}]
+         [:h2 "Text Field"]
+         [:div {:style {:margin-bottom 20}}
+           [text-field
+            {:value @text-state
+             :variant "outlined"
+             :label "Text input"
+             :placeholder "Placeholder"
+             :helper-text "An old Jedi proverb"
+             :class (.-textField classes)
+             :on-change (fn [e]
+                          (reset! text-state (.. e -target -value)))
+             :inputRef #(js/console.log "input-ref" %)}]]
+         [:div {:style {:margin-bottom 20}}
 
          [text-field
-          {:value @text-state
+          {:value @text-area-state
            :label "Textarea"
            :placeholder "Placeholder"
            :helper-text "Helper text"
@@ -78,23 +83,23 @@
                         (reset! text-state (.. e -target -value)))
            :multiline true
            ;; TODO: Autosize textarea is broken.
-           :rows 10}]
-
+           :style {:width 400 :padding 10}
+           :rows 10}]]
+         [:div {:style {:margin-bottom 20}}
          [text-field
           {:value @text-state
            :label "Select"
            :placeholder "Placeholder"
-           :helper-text "Helper text"
            :class (.-textField classes)
            :on-change (fn [e]
                         (reset! text-state (.. e -target -value)))
            :select true}
           [:> mui/MenuItem
            {:value 1}
-           "Item 1"]
+           "Lightside"]
           ;; Same as previous, alternative to adapt-react-class
           [:> mui/MenuItem
            {:value 2}
-           "Item 2"]]]
+           "Darkside"]]]]
       ]
     ))))

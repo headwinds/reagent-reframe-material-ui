@@ -1,8 +1,7 @@
 (ns example.demos.demo-button
   (:require [reagent.core :as r]
             ["material-ui" :as mui]
-            ["material-ui-icons" :as mui-icons])
-  )
+            ["material-ui-icons" :as mui-icons]))
 
 
 (defonce text-state (r/atom "foobar"))
@@ -23,17 +22,20 @@
        {:disable-gutters true}
        [:> mui/Button
         {:variant "contained"
-         :color "primary"
+         :color "secondary"
          :class (.-button classes)
          :on-click #(swap! text-state str " foo")}
-        "Update value property"
-        [:> mui-icons/AddBox]]
+         [:> mui-icons/AddBox]
+        "HAND"
+        ]
 
        [:> mui/Button
         {:variant "outlined"
          :color "secondary"
+         :style {:text-transform "none"}
          :class (.-button classes)
          :on-click #(reset! text-state "")}
-        "Reset"
-        [:> mui-icons/Clear]]]]
+         [:> mui-icons/Clear]
+        "Han shot first"
+        ]]]
     ))))

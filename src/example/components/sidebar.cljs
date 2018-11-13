@@ -11,6 +11,7 @@
    :color "#666"
    :padding 10
    :margin 2
+   :border-radius 4
    :width 200
    :height 40
    :background "transparent"})
@@ -22,13 +23,17 @@
       [:div {:style {:display "block"
                      :position "relative"
                      :width 200
+                     :margin-top 50
+                     :margin-left 10
                      :height "100vh"
                      :background "transparent"
                      }}
-        [:h2 {:style {:fontFamily "Helvetica Neue" :color "#666" :fontSize 18 :margin 10}} "Components" ]
+
+        [:div {:on-click (fn [ev] (set-location "/#/demos/autocomplete")) :style item-style} "Autocomplete"]
         [:div {:on-click (fn [ev] (set-location "/#/demos/button")) :style item-style} "Button"]
+        [:div {:on-click (fn [ev] (set-location "/#/demos/pickers")) :style item-style} "Pickers"]
+        [:div {:on-click (fn [ev] (set-location "/#/demos/menu")) :style item-style} "Menu"]
         [:div {:on-click (fn [ev] (set-location "/#/demos/table")) :style item-style} "Table"]
         [:div {:on-click (fn [ev] (set-location "/#/demos/text-field")) :style item-style} "Text Field"]
-        ;;[:div {:on-click (fn [ev] (set-location "/demos/toolbar")) :style item-style} "Toolbar"]
       ]
     ))))

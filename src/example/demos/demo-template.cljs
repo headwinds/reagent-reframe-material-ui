@@ -1,9 +1,7 @@
 (ns example.demos.demo-template
   (:require [reagent.core :as r]
             ["material-ui" :as mui]
-            ["material-ui-icons" :as mui-icons]
-            [reagent.impl.template :as rtpl])
-  )
+            ["material-ui-icons" :as mui-icons]))
 
 (defn demo-template [{:keys [classes] :as props}]
  (let [component-state (r/atom {:selected 0})]
@@ -12,6 +10,6 @@
       [:div {:style {:display "block"
                      :position "relative"
                      }}
-        [:h2 "Template"]  
+        [:h2 "Template"]
       ]
     ))))

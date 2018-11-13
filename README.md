@@ -65,3 +65,7 @@ Note: because you moved this into a new directory, you shouldn't have a problem 
 
 
 Then open your browser whatever url it created ie: https://glacial-badlands-20785.herokuapp.com/
+
+## Inspiration
+
+[Core.async](https://tech.kontor.com/clojures-core-async-how-we-use-it-c5ebc62d0845)
