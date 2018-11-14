@@ -1,1 +1,1 @@
-{"version":3,"file":"\/Users\/brandonflowers\/forks\/reagent\/examples\/material-ui\/resources\/public\/js\/out\/example\/subs.js","sources":["subs.cljs?rel=1535318442791"],"lineCount":6,"mappings":";AAAA","names":[]}
+{"version":3,"file":"\/Users\/brandonflowers\/github\/reagent-reframe-material\/resources\/public\/js\/out\/example\/subs.js","sources":["subs.cljs?rel=1542211947849"],"lineCount":9,"mappings":";AAAA;;;AAIA,gCAAA,hCAACA,0HACE,WAAKC,GAAGC;AAAR,AAAW,OAAA,iGAAcD","names":["re-frame.core\/reg-sub","db","_"]}

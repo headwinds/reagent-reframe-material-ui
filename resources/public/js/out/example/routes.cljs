@@ -68,6 +68,5 @@
     "text-field"            demo-text-field/demo-text-field
     "autocomplete"          demo-autocomplete/demo-autocomplete
     "pickers"               demo-pickers/demo-pickers
-    "menu"                  demo-menu/demo-menu
-    demo-splash/demo-splash)
+    "menu"                  demo-menu/demo-menu)
 )

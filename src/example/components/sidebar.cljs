@@ -1,6 +1,7 @@
 (ns example.components.sidebar
     (:require [reagent.core :as r]
-              [example.utils.http-fx :refer [set-location]]))
+              [example.subs :as subs]
+              [example.utils.http-fx :refer [<sub set-location]]))
 
 (def item-style
   {:display "block"
@@ -14,26 +15,38 @@
    :border-radius 4
    :width 200
    :height 40
+   :border-color "#eee"
    :background "transparent"})
 
+
+(def selected-style
+ {:border-color "#6cb7e0"})
+
+(defn get-style [active-demo demo]
+  (if (= active-demo demo)
+    (conj item-style selected-style)
+    item-style))
+
 (defn sidebar-view []
- (let [component-state (r/atom {:selected 0})]
     (fn []
-      (let [current-select (get @component-state :selected)]
+      (let [active-demo (<sub [::subs/active-demo])
+            _ (print active-demo)]
       [:div {:style {:display "block"
                      :position "relative"
                      :width 200
-                     :margin-top 50
+                     :margin-top 0
                      :margin-left 10
                      :height "100vh"
                      :background "transparent"
                      }}
-
-        [:div {:on-click (fn [ev] (set-location "/#/demos/autocomplete")) :style item-style} "Autocomplete"]
-        [:div {:on-click (fn [ev] (set-location "/#/demos/button")) :style item-style} "Button"]
-        [:div {:on-click (fn [ev] (set-location "/#/demos/pickers")) :style item-style} "Pickers"]
-        [:div {:on-click (fn [ev] (set-location "/#/demos/menu")) :style item-style} "Menu"]
-        [:div {:on-click (fn [ev] (set-location "/#/demos/table")) :style item-style} "Table"]
-        [:div {:on-click (fn [ev] (set-location "/#/demos/text-field")) :style item-style} "Text Field"]
+        [:div {:style {:margin 10 :border "10px solid #f1f1f1" :overflow "hidden"}}
+          [:img {:src "https://cdn.customfields.bonify.io/littlebitsproduction.myshopify.com/fields/products/accessory_image/10281133513/droid%20parts.jpg" :width 200}]
+        ]
+        [:div {:on-click (fn [ev] (set-location "/#/demos/autocomplete")) :style (get-style active-demo "autocomplete")} "Autocomplete"]
+        [:div {:on-click (fn [ev] (set-location "/#/demos/button")) :style (get-style active-demo "button")} "Button"]
+        [:div {:on-click (fn [ev] (set-location "/#/demos/pickers")) :style (get-style active-demo "pickers")} "Pickers"]
+        [:div {:on-click (fn [ev] (set-location "/#/demos/menu")) :style (get-style active-demo "menu")} "Menu"]
+        [:div {:on-click (fn [ev] (set-location "/#/demos/table")) :style (get-style active-demo "table")} "Table"]
+        [:div {:on-click (fn [ev] (set-location "/#/demos/text-field")) :style (get-style active-demo "text-field")} "Text Field"]
       ]
-    ))))
+    )))

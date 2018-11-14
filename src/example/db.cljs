@@ -10,5 +10,5 @@
              "subtile" "featuring Re-Frame"
    :people {:records nil
             :page 1
-            :limit 10}           
+            :limit 10}
    }})
