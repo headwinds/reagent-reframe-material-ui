@@ -40,7 +40,7 @@
                      :background "transparent"
                      }}
         [:div {:style {:margin 10 :border "10px solid #f1f1f1" :overflow "hidden"}}
-          [:img {:src "https://cdn.customfields.bonify.io/littlebitsproduction.myshopify.com/fields/products/accessory_image/10281133513/droid%20parts.jpg" :width 200}]
+          [:img {:src "https://cdn.customfields.bonify.io/littlebitsproduction.myshopify.com/fields/products/accessory_image/10281133513/droid%20parts.jpg" :width 300 :style {:padding-right 150}}]
         ]
         [:div {:on-click (fn [ev] (set-location "/#/demos/autocomplete")) :style (get-style active-demo "autocomplete")} "Autocomplete"]
         [:div {:on-click (fn [ev] (set-location "/#/demos/button")) :style (get-style active-demo "button")} "Button"]

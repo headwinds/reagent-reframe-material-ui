@@ -1,41 +1,87 @@
 (ns example.demos.demo-button
   (:require [reagent.core :as r]
             ["material-ui" :as mui]
+            [example.subs :as subs]
+            [example.events :as events]
+            [example.utils.http-fx :as http :refer  [<sub >evt]]
             ["material-ui-icons" :as mui-icons]))
 
+(def initial-resource (r/atom "unknown"))
+(def initial-vehicle-page (r/atom 0))
+(def initial-people-page (r/atom 0))
 
-(defonce text-state (r/atom "foobar"))
+(defn handle-search-click [ev resource query]
+  (let [initial-page (if (= resource "vehicle") initial-vehicle-page initial-people-page)]
+    (reset! initial-resource resource)
+    (swap! initial-page  inc)
+    (>evt [:get-starwars {:resource resource
+                          :query query
+                          :page @initial-page}])))
 
 (defn demo-button [{:keys [classes] :as props}]
- (let [component-state (r/atom {:selected 0})]
     (fn []
-      (let [current-select (get @component-state :selected)]
+      (let [starwars (<sub [::subs/starwars])
+            page (:page starwars)
+            records (:records starwars)
+            count (str "Total " (:count starwars) )
+            list (map-indexed (fn [idx itm] [:div {:key idx} (str idx ". ") (:name itm) ] ) records)
+            ]
       [:div {:style {:display "block"
                      :position "relative"
                      }}
       [:h2 "Button"]
-      [:code
-        "would be nice to have a code example here - "
-        [:a {:href "http://blog.klipse.tech/clojure/2016/03/17/klipse.html"} "perhaps using klipse"]
-      ]
+
       [:> mui/Toolbar
        {:disable-gutters true}
        [:> mui/Button
         {:variant "contained"
          :color "secondary"
+         :style {:text-transform "none"}
          :class (.-button classes)
-         :on-click #(swap! text-state str " foo")}
-         [:> mui-icons/AddBox]
-        "HAND"
+         :on-click #(handle-search-click %1 "vehicles" "") }
+         [:div {:style {:margin-right 10}}
+           [:>  mui-icons/LocalCafe]]
+        "Search Vehicles"
         ]
 
        [:> mui/Button
         {:variant "outlined"
          :color "secondary"
-         :style {:text-transform "none"}
+         :style {:text-transform "none" :border-color "#ef0079"}
          :class (.-button classes)
-         :on-click #(reset! text-state "")}
-         [:> mui-icons/Clear]
-        "Han shot first"
-        ]]]
-    ))))
+         :on-click  #(handle-search-click %1 "people" "")}
+         [:div {:style {:margin-right 10}}
+          [:> mui-icons/People]]
+        "Search People"
+        ]]
+
+        [:h4 (when (> page 0) (str "Page " page " Results"))]
+
+        [:div
+          [:p  "resource " @initial-resource]
+          [:p  count]
+          [:div
+            list
+          ]
+
+        ]
+
+        [:h4 "About"]
+
+        [:div {:style {:width 400}}
+          [:p "This is an attempt to port "
+            [:a {:target "_blank" :href "https://material-ui.com/demos/buttons/"}
+              "Material UI's button "
+            ] "component."
+          ]]
+
+
+        [:div
+          [:code
+            "code demo?! "
+            [:a {:href "http://blog.klipse.tech/clojure/2016/03/17/klipse.html"} "perhaps using klipse"]
+          ]]
+
+
+        ]
+    )))

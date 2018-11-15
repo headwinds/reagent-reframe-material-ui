@@ -6,7 +6,7 @@
             [example.utils.theme :refer [with-custom-styles]]
             [reagent.core :as r]
             [re-frame.core :as re]
-            [example.utils.http-fx :as http :refer  [GET POST PUT <sub >evt]]
+            [example.utils.http-fx :as http :refer  [<sub >evt]]
             [example.demos.table.table-sort :as sort :refer [desc sort-table-data-by-selected-column]]
             [goog.object :as gobj]
             [reagent.impl.template :as rtpl]))

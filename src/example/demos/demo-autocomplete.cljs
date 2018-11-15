@@ -1,7 +1,6 @@
 (ns example.demos.demo-autocomplete
   (:require [reagent.core :as r]
             ["material-ui" :as mui]
-            ["material-ui-icons" :as mui-icons]
             [example.utils.theme :refer [with-custom-styles]]
             [example.demos.demo-text-field :refer [text-field]]
             [cljsjs.react-select]))
@@ -79,6 +78,8 @@
                    :style {:width 200}
                    :load-options load-options}]
         ]
+
+        [:h4 "About"]
 
         [:div {:style {:width 400}}
           [:p "This is an attempt to port "

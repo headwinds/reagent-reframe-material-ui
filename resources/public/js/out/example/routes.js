@@ -18,144 +18,144 @@ goog.require('example.demos.demo_pickers');
 goog.require('example.demos.demo_menu');
 goog.require('example.demos.table.demo_table');
 example.routes.hook_browser_navigation_BANG_ = (function example$routes$hook_browser_navigation_BANG_(){
-var G__27394 = (new goog.History());
-goog.events.listen(G__27394,goog.history.EventType.NAVIGATE,((function (G__27394){
+var G__27246 = (new goog.History());
+goog.events.listen(G__27246,goog.history.EventType.NAVIGATE,((function (G__27246){
 return (function (event){
 return secretary.core.dispatch_BANG_.call(null,event.token);
-});})(G__27394))
+});})(G__27246))
 );
 
-G__27394.setEnabled(true);
+G__27246.setEnabled(true);
 
-return G__27394;
+return G__27246;
 });
 example.routes.app_routes = (function example$routes$app_routes(){
 secretary.core.set_config_BANG_.call(null,new cljs.core.Keyword(null,"prefix","prefix",-265908465),"#");
 
-var action__22046__auto___27430 = (function (params__22047__auto__){
-if(cljs.core.map_QMARK_.call(null,params__22047__auto__)){
-var map__27395 = params__22047__auto__;
-var map__27395__$1 = ((((!((map__27395 == null)))?(((((map__27395.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27395.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27395):map__27395);
+var action__22553__auto___27282 = (function (params__22554__auto__){
+if(cljs.core.map_QMARK_.call(null,params__22554__auto__)){
+var map__27247 = params__22554__auto__;
+var map__27247__$1 = ((((!((map__27247 == null)))?(((((map__27247.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27247.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27247):map__27247);
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"splash"], null));
 } else {
-if(cljs.core.vector_QMARK_.call(null,params__22047__auto__)){
-var vec__27397 = params__22047__auto__;
+if(cljs.core.vector_QMARK_.call(null,params__22554__auto__)){
+var vec__27249 = params__22554__auto__;
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"splash"], null));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/",action__22046__auto___27430);
+secretary.core.add_route_BANG_.call(null,"/",action__22553__auto___27282);
 
 
-var action__22046__auto___27431 = (function (params__22047__auto__){
-if(cljs.core.map_QMARK_.call(null,params__22047__auto__)){
-var map__27400 = params__22047__auto__;
-var map__27400__$1 = ((((!((map__27400 == null)))?(((((map__27400.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27400.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27400):map__27400);
+var action__22553__auto___27283 = (function (params__22554__auto__){
+if(cljs.core.map_QMARK_.call(null,params__22554__auto__)){
+var map__27252 = params__22554__auto__;
+var map__27252__$1 = ((((!((map__27252 == null)))?(((((map__27252.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27252.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27252):map__27252);
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"button"], null));
 } else {
-if(cljs.core.vector_QMARK_.call(null,params__22047__auto__)){
-var vec__27402 = params__22047__auto__;
+if(cljs.core.vector_QMARK_.call(null,params__22554__auto__)){
+var vec__27254 = params__22554__auto__;
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"button"], null));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/demos/button",action__22046__auto___27431);
+secretary.core.add_route_BANG_.call(null,"/demos/button",action__22553__auto___27283);
 
 
-var action__22046__auto___27432 = (function (params__22047__auto__){
-if(cljs.core.map_QMARK_.call(null,params__22047__auto__)){
-var map__27405 = params__22047__auto__;
-var map__27405__$1 = ((((!((map__27405 == null)))?(((((map__27405.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27405.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27405):map__27405);
+var action__22553__auto___27284 = (function (params__22554__auto__){
+if(cljs.core.map_QMARK_.call(null,params__22554__auto__)){
+var map__27257 = params__22554__auto__;
+var map__27257__$1 = ((((!((map__27257 == null)))?(((((map__27257.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27257.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27257):map__27257);
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"text-field"], null));
 } else {
-if(cljs.core.vector_QMARK_.call(null,params__22047__auto__)){
-var vec__27407 = params__22047__auto__;
+if(cljs.core.vector_QMARK_.call(null,params__22554__auto__)){
+var vec__27259 = params__22554__auto__;
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"text-field"], null));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/demos/text-field",action__22046__auto___27432);
+secretary.core.add_route_BANG_.call(null,"/demos/text-field",action__22553__auto___27284);
 
 
-var action__22046__auto___27433 = (function (params__22047__auto__){
-if(cljs.core.map_QMARK_.call(null,params__22047__auto__)){
-var map__27410 = params__22047__auto__;
-var map__27410__$1 = ((((!((map__27410 == null)))?(((((map__27410.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27410.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27410):map__27410);
+var action__22553__auto___27285 = (function (params__22554__auto__){
+if(cljs.core.map_QMARK_.call(null,params__22554__auto__)){
+var map__27262 = params__22554__auto__;
+var map__27262__$1 = ((((!((map__27262 == null)))?(((((map__27262.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27262.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27262):map__27262);
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"table"], null));
 } else {
-if(cljs.core.vector_QMARK_.call(null,params__22047__auto__)){
-var vec__27412 = params__22047__auto__;
+if(cljs.core.vector_QMARK_.call(null,params__22554__auto__)){
+var vec__27264 = params__22554__auto__;
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"table"], null));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/demos/table",action__22046__auto___27433);
+secretary.core.add_route_BANG_.call(null,"/demos/table",action__22553__auto___27285);
 
 
-var action__22046__auto___27434 = (function (params__22047__auto__){
-if(cljs.core.map_QMARK_.call(null,params__22047__auto__)){
-var map__27415 = params__22047__auto__;
-var map__27415__$1 = ((((!((map__27415 == null)))?(((((map__27415.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27415.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27415):map__27415);
+var action__22553__auto___27286 = (function (params__22554__auto__){
+if(cljs.core.map_QMARK_.call(null,params__22554__auto__)){
+var map__27267 = params__22554__auto__;
+var map__27267__$1 = ((((!((map__27267 == null)))?(((((map__27267.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27267.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27267):map__27267);
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"autocomplete"], null));
 } else {
-if(cljs.core.vector_QMARK_.call(null,params__22047__auto__)){
-var vec__27417 = params__22047__auto__;
+if(cljs.core.vector_QMARK_.call(null,params__22554__auto__)){
+var vec__27269 = params__22554__auto__;
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"autocomplete"], null));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/demos/autocomplete",action__22046__auto___27434);
+secretary.core.add_route_BANG_.call(null,"/demos/autocomplete",action__22553__auto___27286);
 
 
-var action__22046__auto___27435 = (function (params__22047__auto__){
-if(cljs.core.map_QMARK_.call(null,params__22047__auto__)){
-var map__27420 = params__22047__auto__;
-var map__27420__$1 = ((((!((map__27420 == null)))?(((((map__27420.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27420.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27420):map__27420);
+var action__22553__auto___27287 = (function (params__22554__auto__){
+if(cljs.core.map_QMARK_.call(null,params__22554__auto__)){
+var map__27272 = params__22554__auto__;
+var map__27272__$1 = ((((!((map__27272 == null)))?(((((map__27272.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27272.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27272):map__27272);
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"pickers"], null));
 } else {
-if(cljs.core.vector_QMARK_.call(null,params__22047__auto__)){
-var vec__27422 = params__22047__auto__;
+if(cljs.core.vector_QMARK_.call(null,params__22554__auto__)){
+var vec__27274 = params__22554__auto__;
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"pickers"], null));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/demos/pickers",action__22046__auto___27435);
+secretary.core.add_route_BANG_.call(null,"/demos/pickers",action__22553__auto___27287);
 
 
-var action__22046__auto___27436 = (function (params__22047__auto__){
-if(cljs.core.map_QMARK_.call(null,params__22047__auto__)){
-var map__27425 = params__22047__auto__;
-var map__27425__$1 = ((((!((map__27425 == null)))?(((((map__27425.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27425.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27425):map__27425);
+var action__22553__auto___27288 = (function (params__22554__auto__){
+if(cljs.core.map_QMARK_.call(null,params__22554__auto__)){
+var map__27277 = params__22554__auto__;
+var map__27277__$1 = ((((!((map__27277 == null)))?(((((map__27277.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27277.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__27277):map__27277);
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"menu"], null));
 } else {
-if(cljs.core.vector_QMARK_.call(null,params__22047__auto__)){
-var vec__27427 = params__22047__auto__;
+if(cljs.core.vector_QMARK_.call(null,params__22554__auto__)){
+var vec__27279 = params__22554__auto__;
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("example.events","set-active-demo","example.events/set-active-demo",-1754613640),"menu"], null));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/demos/menu",action__22046__auto___27436);
+secretary.core.add_route_BANG_.call(null,"/demos/menu",action__22553__auto___27288);
 
 
 return example.routes.hook_browser_navigation_BANG_.call(null);
 });
 example.routes.get_main_demo = (function example$routes$get_main_demo(demo_name){
-var G__27437 = demo_name;
-switch (G__27437) {
+var G__27289 = demo_name;
+switch (G__27289) {
 case "splash":
 return example.demos.demo_splash.demo_splash;
 
@@ -185,9 +185,9 @@ return example.demos.demo_menu.demo_menu;
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__27437)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__27289)].join('')));
 
 }
 });
 
-//# sourceMappingURL=routes.js.map?rel=1542217575252
+//# sourceMappingURL=routes.js.map?rel=1542228782695

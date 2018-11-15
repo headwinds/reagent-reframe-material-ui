@@ -10,6 +10,7 @@
                  [cljsjs/material-ui "1.2.1-1"]
                  [cljsjs/material-ui-icons "1.1.0-1"]
                  [cljsjs/react-select "1.2.1-1"]
+                 [cljsjs/moment "2.17.1-1"]
                  [compojure "1.6.0"]
                  [ring/ring-jetty-adapter "1.6.2"]
                  [ring/ring-ssl "0.3.0"]
