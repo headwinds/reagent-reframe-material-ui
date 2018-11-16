@@ -79,7 +79,7 @@ goog.addDependency("../ajax/ring.js", ['ajax.ring'], ['ajax.formats', 'ajax.inte
 goog.addDependency("../ajax/simple.js", ['ajax.simple'], ['ajax.formats', 'goog.net.XhrIo', 'ajax.interceptors', 'cljs.core', 'ajax.protocols', 'ajax.util', 'clojure.string']);
 goog.addDependency("../ajax/easy.js", ['ajax.easy'], ['ajax.formats', 'ajax.transit', 'ajax.json', 'ajax.url', 'cljs.core', 'ajax.ring', 'ajax.simple']);
 goog.addDependency("../cljsjs/development/moment.inc.js", ['cljsjs.moment'], [], {'foreign-lib': true});
-goog.addDependency("../example/utils/js.js", ['example.utils.js'], ['cljsjs.moment', 'cljs.core']);
+goog.addDependency("../example/utils/js.js", ['example.utils.js'], ['cljsjs.moment', 'cljs.core', 'clojure.string']);
 goog.addDependency("../reagent/interop.js", ['reagent.interop'], ['cljs.core']);
 goog.addDependency("../reagent/debug.js", ['reagent.debug'], ['cljs.core']);
 goog.addDependency("../reagent/impl/util.js", ['reagent.impl.util'], ['reagent.interop', 'cljs.core', 'reagent.debug', 'clojure.string']);

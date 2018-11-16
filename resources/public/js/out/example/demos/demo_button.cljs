@@ -26,12 +26,12 @@
             count (str "Total " (:count starwars) )
             list (map-indexed (fn [idx itm] [:div {:key idx} (str idx ". ") (:name itm) ] ) records)
             ]
-            [:div {:style {:display "flex"
-                           :flexDirection "column"
-                           :position "relative"
-                           :margin 50
-                           :alignItems "left"
-                           }}
+      [:div {:style {:display "flex"
+                     :flexDirection "column"
+                     :position "relative"
+                     :margin 50
+                     :alignItems "left"
+                     }}
       [:h2 "Button"]
 
       [:> mui/Toolbar
