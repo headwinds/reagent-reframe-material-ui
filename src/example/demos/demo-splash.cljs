@@ -15,9 +15,7 @@
            :color "#666"}})
 
 (defn demo-splash [{:keys [classes] :as props}]
- (let [component-state (r/atom {:selected 0})]
     (fn []
-      (let [current-select (get @component-state :selected)]
       [:div {:style {:display "flex"
                      :flexDirection "column"
                      :position "relative"
@@ -43,4 +41,4 @@
            ]
          ]
       ]
-    ))))
+    ))

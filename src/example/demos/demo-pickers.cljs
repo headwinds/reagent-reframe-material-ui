@@ -16,12 +16,17 @@
  (let [component-state (r/atom {:selected 0})]
     (fn []
       (let [current-select (get @component-state :selected)]
-      [:div {:style {:display "block"
+      [:div {:style {:display "flex"
+                     :flexDirection "column"
                      :position "relative"
+                     :margin 50
+                     :alignItems "left"
                      }}
-        [:h2 "Date Range Pickers"]
+        [:h2 {:style {:margin "20px 0px"}} "Pickers"]
 
           [:div {:style {:display "flex" :flex-direciton "row"}}
+
+          
 
           [text-field
            {:id "datetime-local"
@@ -49,7 +54,7 @@
               :on-change (fn [e]
                           (swap! model #(-> %1 (assoc :from %2)) (.. e -target -value)))}]]
 
-            [:h4 "Results"]
+            [:h4 {:style {:margin "20px 0px"}} "Results"]
               [:div
               [:div
                 [:p "To: " (moment-parse (:to @model))]
@@ -60,7 +65,7 @@
 
             ;https://swapi.co/api/people/?search=r2
 
-            [:h4 "About"]
+            [:h4 {:style {:margin "20px 0px"}} "About"]
 
             [:div {:style {:width 400}}
               [:p "This is an attempt to port "

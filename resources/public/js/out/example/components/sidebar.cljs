@@ -1,7 +1,7 @@
 (ns example.components.sidebar
     (:require [reagent.core :as r]
               [example.subs :as subs]
-              [example.utils.http-fx :refer [<sub set-location]]))
+              [example.utils.http-fx :refer [<sub >evt set-location]]))
 
 (def item-style
   {:display "block"
@@ -20,7 +20,10 @@
 
 
 (def selected-style
- {:border-color "#6cb7e0"})
+ {:border "2px solid #6cb7e0"})
+
+(defn handle-click []
+  (set-location "#/"))
 
 (defn get-style [active-demo demo]
   (if (= active-demo demo)
@@ -39,7 +42,7 @@
                      :height "100vh"
                      :background "transparent"
                      }}
-        [:div {:style {:margin 10 :border "10px solid #f1f1f1" :overflow "hidden"}}
+        [:div {:on-click handle-click :style {:margin 10 :border "10px solid #f1f1f1" :pointer-events "all" :cursor "pointer" :overflow "hidden"}}
           [:img {:src "https://cdn.customfields.bonify.io/littlebitsproduction.myshopify.com/fields/products/accessory_image/10281133513/droid%20parts.jpg" :width 300 :style {:padding-right 150}}]
         ]
         [:div {:on-click (fn [ev] (set-location "/#/demos/autocomplete")) :style (get-style active-demo "autocomplete")} "Autocomplete"]

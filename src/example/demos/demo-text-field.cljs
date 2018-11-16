@@ -7,7 +7,12 @@
 
   ;; TextField cursor fix:
 
-  (defonce text-state (r/atom "Wage peace."))
+  (defonce text-jedi-state (r/atom "Wage peace."))
+  (defonce text-sith-state (r/atom "Anger is useful—unless it is used against you."))
+
+  (defonce text-state (r/atom @text-jedi-state))
+
+  (defonce race (r/atom "Jedi"))
 
   (defonce text-area-state (r/atom "Shaggy giants from an arboreal world, the tall and commanding Wookiee species is an impressive sight to even the most jaded spacer.\n\nDespite their fearsome and savage countenance, Wookiees are intelligent, sophisticated, loyal and trusting. Loyalty and bravery are near-sacred tenets in Wookiee society.\n\nWhen peaceful, Wookiees are tender and gentle. Their tempers, however, are short; when angered, Wookiees can fly into a berserker rage and will not stop until the object of their distemper is sufficiently destroyed."))
 
@@ -53,8 +58,11 @@
  (let [component-state (r/atom {:selected 0})]
     (fn []
       (let [current-select (get @component-state :selected)]
-      [:div {:style {:display "block"
+      [:div {:style {:display "flex"
+                     :flexDirection "column"
                      :position "relative"
+                     :margin 50
+                     :alignItems "left"
                      }}
         [:> mui/Grid
          {:container true
@@ -66,7 +74,8 @@
              :variant "outlined"
              :label "Text input"
              :placeholder "Placeholder"
-             :helper-text "An old Jedi proverb"
+             :style {:width 400 :padding 10}
+             :helper-text (str "An old " @race " proverb")
              :class (.-textField classes)
              :on-change (fn [e]
                           (reset! text-state (.. e -target -value)))
@@ -92,7 +101,8 @@
            :placeholder "Placeholder"
            :class (.-textField classes)
            :on-change (fn [e]
-                        (reset! text-state (.. e -target -value)))
+                        (reset! race (if (= (.. e -target -value) 2) "Sith" "Jedi"))
+                        (reset! text-state (if (= (.. e -target -value) 2) @text-sith-state @text-jedi-state)))
            :select true}
           [:> mui/MenuItem
            {:value 1}

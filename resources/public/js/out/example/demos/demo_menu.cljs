@@ -44,8 +44,11 @@
  (let [component-state (r/atom {:selected 0})]
     (fn []
       (let [current-select (get @component-state :selected)]
-      [:div {:style {:display "block"
+      [:div {:style {:display "flex"
+                     :flexDirection "column"
                      :position "relative"
+                     :margin 50
+                     :alignItems "left"
                      }}
         [:h2 "Menu"]
         (settings-menu classes)

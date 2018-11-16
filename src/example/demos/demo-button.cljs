@@ -11,9 +11,9 @@
 (def initial-people-page (r/atom 0))
 
 (defn handle-search-click [ev resource query]
-  (let [initial-page (if (= resource "vehicle") initial-vehicle-page initial-people-page)]
+  (let [initial-page (if (= resource "vehicles") initial-vehicle-page initial-people-page)]
     (reset! initial-resource resource)
-    (swap! initial-page  inc)
+    (swap! initial-page inc)
     (>evt [:get-starwars {:resource resource
                           :query query
                           :page @initial-page}])))
@@ -26,9 +26,12 @@
             count (str "Total " (:count starwars) )
             list (map-indexed (fn [idx itm] [:div {:key idx} (str idx ". ") (:name itm) ] ) records)
             ]
-      [:div {:style {:display "block"
-                     :position "relative"
-                     }}
+            [:div {:style {:display "flex"
+                           :flexDirection "column"
+                           :position "relative"
+                           :margin 50
+                           :alignItems "left"
+                           }}
       [:h2 "Button"]
 
       [:> mui/Toolbar
@@ -41,7 +44,7 @@
          :on-click #(handle-search-click %1 "vehicles" "") }
          [:div {:style {:margin-right 10}}
            [:>  mui-icons/LocalCafe]]
-        "Search Vehicles"
+        (str "Search Vehicles / p" @initial-vehicle-page)
         ]
 
        [:> mui/Button
@@ -52,12 +55,12 @@
          :on-click  #(handle-search-click %1 "people" "")}
          [:div {:style {:margin-right 10}}
           [:> mui-icons/People]]
-        "Search People"
+          (str "Search People / p" @initial-people-page)
         ]]
 
-        [:h4 (when (> page 0) (str "Page " page " Results"))]
+        [:h4 {:style {:margin "20px 0px"}} (when (> page 0) [:span {:style {:text-transform "capitalize"}} (str @initial-resource " page " page " results")])]
 
-        [:div
+        [:div {:style {:margin "20px 0px"}}
           [:p  "resource " @initial-resource]
           [:p  count]
           [:div
@@ -66,7 +69,7 @@
 
         ]
 
-        [:h4 "About"]
+        [:h4 {:style {:margin "20px 0px"}} "About" ]
 
         [:div {:style {:width 400}}
           [:p "This is an attempt to port "

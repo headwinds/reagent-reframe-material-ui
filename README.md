@@ -21,6 +21,13 @@ This repo represents a start at this design goal and begins to outline the skele
 lein figwheel
 ```
 
+## Create an alias
+
+```
+ln -n /path/to/this/project ~/starwars
+cd starwars
+```
+
 Open browser to http://localhost:5000/
 
 ## Contributing

@@ -14,7 +14,7 @@
             [example.demos.demo-splash :as demo-splash]
             [example.demos.demo-text-field :as demo-text-field]
             [example.demos.demo-button :as demo-button]
-            [example.demos.demo-autocomplete :as demo-autocomplete]
+            [example.demos.autocomplete.demo-autocomplete :as demo-autocomplete]
             [example.demos.demo-pickers :as demo-pickers]
             [example.demos.demo-menu :as demo-menu]
             [example.demos.table.demo-table :as demo-table]

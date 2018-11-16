@@ -163,7 +163,13 @@
         (do
           (reset! people-total new-people-total)
           (update-people-data! people people-map-row)))
-      [:div
+      [:div {:style {:display "flex"
+                     :flexDirection "column"
+                     :position "relative"
+                     :margin 50
+                     :alignItems "left"
+                     }}
+        [:h2 "Table"]           
        (if (> (count people) 0)
          [:> (with-custom-styles (r/reactify-component people-table))]
          [:div {:style {:padding 20 :borderTop "1px solid #ddd"}} "Loading..."]

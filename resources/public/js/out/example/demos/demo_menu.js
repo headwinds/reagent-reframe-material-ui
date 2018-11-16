@@ -25,18 +25,18 @@ example.demos.demo_menu.option_keys_click.call(null,e);
 return cljs.core.reset_BANG_.call(null,example.demos.demo_menu.setting_selected,e.target.value);
 })], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),example.demos.demo_menu.global$module$material_ui_icons.LocalCafe,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"marginLeft","marginLeft",-551287007),(5)], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),example.demos.demo_menu.global$module$material_ui.ListItemText,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"primary","primary",817773892),"Speeders"], null)], null)], null)], null)], null);
 });
-example.demos.demo_menu.demo_menu = (function example$demos$demo_menu$demo_menu(p__23041){
-var map__23042 = p__23041;
-var map__23042__$1 = ((((!((map__23042 == null)))?(((((map__23042.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__23042.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__23042):map__23042);
-var props = map__23042__$1;
-var classes = cljs.core.get.call(null,map__23042__$1,new cljs.core.Keyword(null,"classes","classes",2037804510));
+example.demos.demo_menu.demo_menu = (function example$demos$demo_menu$demo_menu(p__22887){
+var map__22888 = p__22887;
+var map__22888__$1 = ((((!((map__22888 == null)))?(((((map__22888.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__22888.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__22888):map__22888);
+var props = map__22888__$1;
+var classes = cljs.core.get.call(null,map__22888__$1,new cljs.core.Keyword(null,"classes","classes",2037804510));
 var component_state = reagent.core.atom.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"selected","selected",574897764),(0)], null));
-return ((function (component_state,map__23042,map__23042__$1,props,classes){
+return ((function (component_state,map__22888,map__22888__$1,props,classes){
 return (function (){
 var current_select = cljs.core.get.call(null,cljs.core.deref.call(null,component_state),new cljs.core.Keyword(null,"selected","selected",574897764));
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"display","display",242065432),"block",new cljs.core.Keyword(null,"position","position",-2011731912),"relative"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h2","h2",-372662728),"Menu"], null),example.demos.demo_menu.settings_menu.call(null,classes)], null);
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"display","display",242065432),"flex",new cljs.core.Keyword(null,"flexDirection","flexDirection",1286039598),"column",new cljs.core.Keyword(null,"position","position",-2011731912),"relative",new cljs.core.Keyword(null,"margin","margin",-995903681),(50),new cljs.core.Keyword(null,"alignItems","alignItems",410331199),"left"], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h2","h2",-372662728),"Menu"], null),example.demos.demo_menu.settings_menu.call(null,classes)], null);
 });
-;})(component_state,map__23042,map__23042__$1,props,classes))
+;})(component_state,map__22888,map__22888__$1,props,classes))
 });
 
-//# sourceMappingURL=demo_menu.js.map?rel=1542143929038
+//# sourceMappingURL=demo_menu.js.map?rel=1542326926780
