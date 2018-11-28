@@ -16,6 +16,7 @@
 (re/reg-event-db
  ::set-active-demo
  (fn [db [_ active-demo]]
+   (assoc db :inactive-demo (:active-demo db))
    (assoc db :active-demo active-demo)))
 
 (re/reg-event-db :active-demo

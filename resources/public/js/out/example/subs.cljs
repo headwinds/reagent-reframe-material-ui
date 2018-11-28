@@ -5,5 +5,8 @@
 (reg-sub ::active-demo
    (fn [db _] (:active-demo db)))
 
+(reg-sub ::inactive-demo
+  (fn [db _] (:inactive-demo db)))
+
 (reg-sub ::starwars
   (fn [db _] (:starwars db)))

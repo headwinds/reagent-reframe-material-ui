@@ -24,14 +24,14 @@ return (0);
 });
 example.demos.table.table_sort.get_sorting = (function example$demos$table$table_sort$get_sorting(var_args){
 var args__4534__auto__ = [];
-var len__4531__auto___22600 = arguments.length;
-var i__4532__auto___22601 = (0);
+var len__4531__auto___26926 = arguments.length;
+var i__4532__auto___26927 = (0);
 while(true){
-if((i__4532__auto___22601 < len__4531__auto___22600)){
-args__4534__auto__.push((arguments[i__4532__auto___22601]));
+if((i__4532__auto___26927 < len__4531__auto___26926)){
+args__4534__auto__.push((arguments[i__4532__auto___26927]));
 
-var G__22602 = (i__4532__auto___22601 + (1));
-i__4532__auto___22601 = G__22602;
+var G__26928 = (i__4532__auto___26927 + (1));
+i__4532__auto___26927 = G__26928;
 continue;
 } else {
 }
@@ -57,15 +57,15 @@ return (- example.demos.table.table_sort.desc.call(null,rowA,rowB,selected_colum
 example.demos.table.table_sort.get_sorting.cljs$lang$maxFixedArity = (3);
 
 /** @this {Function} */
-example.demos.table.table_sort.get_sorting.cljs$lang$applyTo = (function (seq22596){
-var G__22597 = cljs.core.first.call(null,seq22596);
-var seq22596__$1 = cljs.core.next.call(null,seq22596);
-var G__22598 = cljs.core.first.call(null,seq22596__$1);
-var seq22596__$2 = cljs.core.next.call(null,seq22596__$1);
-var G__22599 = cljs.core.first.call(null,seq22596__$2);
-var seq22596__$3 = cljs.core.next.call(null,seq22596__$2);
+example.demos.table.table_sort.get_sorting.cljs$lang$applyTo = (function (seq26922){
+var G__26923 = cljs.core.first.call(null,seq26922);
+var seq26922__$1 = cljs.core.next.call(null,seq26922);
+var G__26924 = cljs.core.first.call(null,seq26922__$1);
+var seq26922__$2 = cljs.core.next.call(null,seq26922__$1);
+var G__26925 = cljs.core.first.call(null,seq26922__$2);
+var seq26922__$3 = cljs.core.next.call(null,seq26922__$2);
 var self__4518__auto__ = this;
-return self__4518__auto__.cljs$core$IFn$_invoke$arity$variadic(G__22597,G__22598,G__22599,seq22596__$3);
+return self__4518__auto__.cljs$core$IFn$_invoke$arity$variadic(G__26923,G__26924,G__26925,seq26922__$3);
 });
 
 example.demos.table.table_sort.sort_table_data_by_selected_column = (function example$demos$table$table_sort$sort_table_data_by_selected_column(order,selected_column,rows,map_row){
@@ -74,4 +74,4 @@ cljs.core.print.call(null,"sort-table-data-by-selected-column selected-column:",
 return cljs.core.sort.call(null,example.demos.table.table_sort.get_sorting.call(null,order,selected_column,map_row),rows);
 });
 
-//# sourceMappingURL=table_sort.js.map?rel=1540761288291
+//# sourceMappingURL=table_sort.js.map?rel=1543433658853

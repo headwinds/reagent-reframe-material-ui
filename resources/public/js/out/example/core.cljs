@@ -15,7 +15,6 @@
             [example.routes :as routes]
             [goog.object :as gobj]
             [reagent.impl.template :as rtpl]))
-
 (defn start []
   (routes/app-routes)
   (re/dispatch-sync [:initialize])

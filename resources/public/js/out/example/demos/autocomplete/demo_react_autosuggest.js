@@ -15,8 +15,8 @@ if(cljs.core.empty_QMARK_.call(null,trimmed_val)){
 return cljs.core.PersistentVector.EMPTY;
 } else {
 return cljs.core.into.call(null,cljs.core.PersistentVector.EMPTY,cljs.core.filter.call(null,cljs.core.comp.call(null,((function (trimmed_val){
-return (function (p1__23527_SHARP_){
-return cljs.core.re_matches.call(null,example.demos.autocomplete.demo_react_autosuggest.str__GT_regex.call(null,trimmed_val),p1__23527_SHARP_);
+return (function (p1__24704_SHARP_){
+return cljs.core.re_matches.call(null,example.demos.autocomplete.demo_react_autosuggest.str__GT_regex.call(null,trimmed_val),p1__24704_SHARP_);
 });})(trimmed_val))
 ,new cljs.core.Keyword(null,"name","name",1843675177)),example.demos.autocomplete.demo_react_autosuggest.people));
 }
@@ -53,4 +53,4 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 ;})(suggestions,as_val,update_suggestions,update_state_val))
 });
 
-//# sourceMappingURL=demo_react_autosuggest.js.map?rel=1542320591815
+//# sourceMappingURL=demo_react_autosuggest.js.map?rel=1543435804095

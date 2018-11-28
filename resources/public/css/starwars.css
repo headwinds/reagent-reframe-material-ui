@@ -1,0 +1,26 @@
+body {
+  font-family: "Helvetica";
+  color: #666;
+}
+
+input:focus {
+  outline: none;
+}
+
+.pageChange-enter {
+  opacity: 0.01;
+}
+
+.pageChange-enter.pageChange-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms ease-in;
+}
+
+.pageChange-leave {
+  opacity: 1;
+}
+
+.pageChange-leave.pageChange-leave-active {
+  opacity: 0.01;
+  transition: opacity 5000ms ease-in;
+}

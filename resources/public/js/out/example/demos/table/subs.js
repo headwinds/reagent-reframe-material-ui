@@ -9,4 +9,4 @@ re_frame.core.reg_sub.call(null,new cljs.core.Keyword("example.demos.table.subs"
 return cljs.core.get_in.call(null,db,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"people","people",1443537404),new cljs.core.Keyword(null,"total","total",1916810418)], null));
 }));
 
-//# sourceMappingURL=subs.js.map?rel=1540767111346
+//# sourceMappingURL=subs.js.map?rel=1543435804211

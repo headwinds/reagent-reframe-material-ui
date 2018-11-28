@@ -3,6 +3,7 @@
 (def default-db
   {
    :active-demo "splash"
+   :inactive-demo "splash"
    :user nil ; current logged in user
    :logs nil
    :starwars {:records []
