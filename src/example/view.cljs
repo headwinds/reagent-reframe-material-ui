@@ -48,7 +48,7 @@
             (style "top" (str (.-top rect) "px"))
             (style "left" (str (.-left rect) "px"))
             (transition)
-            (duration 1000)
+            (duration 750)
             (style "opacity" 0)
             (on "end"
                 (fn []
