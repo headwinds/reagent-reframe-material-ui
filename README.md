@@ -79,5 +79,5 @@ Then open your browser whatever url it created ie: https://glacial-badlands-2078
 
 ## Credit
 
-[Core.async](https://tech.kontor.com/clojures-core-async-how-we-use-it-c5ebc62d0845)
-[reagent with transition group example](https://github.com/AlexanderWingard/reagent-with-transition-group-example)
+* [Core.async](https://tech.kontor.com/clojures-core-async-how-we-use-it-c5ebc62d0845)
+* [reagent with transition group example](https://github.com/AlexanderWingard/reagent-with-transition-group-example)
